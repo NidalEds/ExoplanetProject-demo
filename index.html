@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <meta charset="UTF-8">
   <title>Dunia yang Jauh: Berburu Exoplanet dengan AI</title>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -16,6 +17,24 @@
 <body>
   <h2>Analisis Kurva Cahaya Exoplanet</h2>
 <p>
+  Grafik di bawah ini menunjukkan perubahan kecerahan bintang selama waktu observasi. Penurunan tajam pada grafik menandakan kemungkinan adanya exoplanet yang melintas di depan bintang.
+</p>
+<div id="plotly-chart" style="width:100%;max-width:700px;height:400px;"></div>
+<script>
+  var time = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4];
+  var flux = [1.0, 0.99, 1.01, 0.97, 1.0, 1.02, 0.96, 1.0, 1.01];
+
+  var data = [{
+    x: time,
+    y: flux,
+    type: 'scatter',
+    mode: 'lines+markers',
+    marker: {color: 'gold'}
+  }];
+
+  Plotly.newPlot('plotly-chart', data, { title: 'Kurva Cahaya Exoplanet', xaxis:{title:'Waktu'}, yaxis:{title:'Kecerahan (Flux)'} });
+</script>
+
   <header>
     <h1>Dunia yang Jauh</h1>
     <div class="subtitle">Berburu Exoplanet dengan AI</div>
