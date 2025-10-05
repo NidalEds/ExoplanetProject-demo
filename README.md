@@ -1,2 +1,1 @@
-<title> 
-  A World Away: Hunting Exoplanets with AI (Classification Model)
+A World Away: Hunting Exoplanets with AI (Classification Model)
